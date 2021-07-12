@@ -2,7 +2,6 @@ import useIsMobile from "@/hooks/useIsMobile";
 import React from "react";
 import classNames from "classnames";
 
-import Navbar from "../Navbar";
 import Sidebar from "../Sidebar";
 
 import useStore from "@/store/store";
@@ -20,10 +19,7 @@ function Layout({ children }: Layout) {
   return (
     <div className={classNames(styles.Appwrapper, styles[locale])}>
       {isMobile && <Sidebar />}
-      <div className={styles.Layout}>
-        <Navbar />
-        {children}
-      </div>
+      <div className={styles.Layout}>{children}</div>
     </div>
   );
 }

@@ -8,6 +8,8 @@ import useIsMobile from "@/hooks/useIsMobile";
 import Blocks from "@/assets/icons/blocks.svg";
 
 import styles from "./LandingPage.module.scss";
+import React from "react";
+import Navbar from "@/components/Navbar";
 
 const PAGE_SECTIONS = [
   {
@@ -57,6 +59,7 @@ function LandingPage() {
   const isMobile = useIsMobile();
   return (
     <section id="home" className={styles.LandingPage}>
+      <Navbar />
       {!isMobile && (
         <motion.div
           initial={{ y: 0 }}

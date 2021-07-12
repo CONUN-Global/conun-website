@@ -1,31 +1,36 @@
 .Navbar {
   align-items: center;
-  background-color: #fff;
+  background-color: transparent;
   display: flex;
-  height: calc(60px - 2rem);
+  height: calc(60px - 4rem);
   justify-content: space-between;
+  left: 0;
   padding: 1rem;
-  position: relative;
+  position: absolute;
+  top: 20px;
+  width: calc(100vw - 4rem);
   z-index: 1;
+
   &.isMobile {
     padding: 1rem;
   }
 
   & .MenuButton {
     & .MenuIcon {
-      fill: var(--conun-blue);
+      fill: #fff;
       width: 24px;
     }
   }
 
   & .ConunLogo {
     cursor: pointer;
+    fill: #fff;
     width: 70px;
   }
 
   & .Pages {
     align-items: center;
-    color: var(--conun-blue);
+    color: #fff;
     display: flex;
 
     & > :not(:last-child) {
@@ -39,14 +44,12 @@
     }
 
     & .ProductsButton {
-      border: solid 1px var(--conun-blue);
       border-radius: 4px;
       padding: 5px 15px;
       transition: all 0.2s ease-in;
 
       &:hover {
-        background-color: var(--conun-blue);
-        color: #fff;
+        border: solid 1px #fff;
       }
     }
   }

@@ -7,6 +7,62 @@
   padding: 250px var(--website-padding);
   position: relative;
 
+  .Navbar {
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+    height: calc(60px - 4rem);
+    justify-content: space-between;
+    left: 0;
+    padding: 1rem;
+    position: absolute;
+    top: 20px;
+    width: calc(100vw - 4rem);
+    z-index: 1;
+
+    &.isMobile {
+      padding: 1rem;
+    }
+
+    & .MenuButton {
+      & .MenuIcon {
+        fill: #fff;
+        width: 24px;
+      }
+    }
+
+    & .ConunLogo {
+      cursor: pointer;
+      width: 70px;
+    }
+
+    & .Pages {
+      align-items: center;
+      color: #fff;
+      display: flex;
+
+      & > :not(:last-child) {
+        margin-right: 30px;
+      }
+
+      & .Page {
+        &:hover {
+          filter: opacity(75%);
+        }
+      }
+
+      & .ProductsButton {
+        border-radius: 4px;
+        padding: 5px 15px;
+        transition: all 0.2s ease-in;
+
+        &:hover {
+          border: solid 1px #fff;
+        }
+      }
+    }
+  }
+
   & .BlocksContainer {
     position: absolute;
     right: 0;
